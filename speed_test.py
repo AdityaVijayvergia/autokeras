@@ -16,7 +16,7 @@ def test_functional_api():
     image_input = ak.ImageInput()
     output = image_input
     output = ak.Normalization()(output)
-    # output = ak.ImageAugmentation()(output)
+    output = ak.ImageAugmentation()(output)
     output = ak.ConvBlock()(output)
 
     classification_outputs = ak.ClassificationHead()(output)
